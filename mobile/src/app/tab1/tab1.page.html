@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Matches
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Matches</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list *ngIf="matchs.length > 0; else noData">
+      <ion-item *ngFor="let match of matchs">
+        <ion-label>
+          <h2>{{ match.name_home_team }} vs {{ match.name_away_team }}</h2>
+          <p>{{ match.home_score ?? 0 }} vs {{ match.away_score ?? 0 }} </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+
+    <ng-template #noData>
+      <p>There are no matches available.</p>
+    </ng-template>
+  </ion-content>
+
+
+
+</ion-content>
