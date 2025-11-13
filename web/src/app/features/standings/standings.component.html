@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-8">
+
+                    </div>
+                    <div class="col-md-4 text-right">
+                    </div>
+                </div><br><br>
+
+                <!--TABLE STANDINGS -->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Goals for</th>
+                                <th>Goals against</th>
+                                <th>Goal diff</th>
+                                <th>Points</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let standings of listStandings">
+                                <td>{{standings.team}}</td>
+                                <td>{{standings.played}}</td>
+                                <td>{{standings.goals_for}}</td>
+                                <td>{{standings.goals_against}}</td>
+                                <td>{{standings.goal_diff}}</td>
+                                <td>{{standings.points}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
